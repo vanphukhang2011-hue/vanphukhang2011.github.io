@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hệ hô hấp</title>
+  <style>
+    body {font-family: Arial, sans-serif; background-color: #f5f9ff; margin: 0; padding: 0; line-height: 1.6;}
+    header {background-color: rgb(207, 153, 18); color: white; text-align: center; padding: 20px; position: relative;}
+    header img {width: 40px; height: auto; position: absolute; left: 16px; top: 12px; cursor: pointer;}
+    h1 {margin: 0; font-size: 28px;}
+    h2 {color: rgb(207,153,18); margin-left: 20px; margin-top: 30px;}
+    .info {display: flex; align-items: center; gap: 20px; margin: 20px; background: white;
+      border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);}
+    .info img {width: 250px; border-radius: 15px; transition: .3s;}
+    .info img:hover {transform: scale(1.05);}
+    ul, ol {margin: 10px 40px; padding: 0;}
+    li {background-color: #fff3cd; border: 1px solid #e0b800; border-radius: 10px;
+        padding: 10px; margin-bottom: 8px;}
+    footer {text-align: center; background-color: #222; color: white; padding: 10px; margin-top: 30px;}
+  /* Zoom hình home */
+  .zoom-img {
+  width: 40px;
+  height: auto;
+  transition: transform 0.3s ease;}
+  .zoom-img:hover {
+  transform: scale(1.4); /* Phóng to 20% */}
+  ul li:hover{scale: 1.05;
+  transition: 0.5s;}
+  ol li:hover{scale: 1.025;
+  transition: 0.5s;}
+  /* Responsive web cực ngắn */
+@media (max-width: 768px) {
+  .info {
+    flex-direction: column;
+    text-align: center;
+  }
+  .info img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+  
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="https://www.freeiconspng.com/uploads/home-icon-png-31.png" onclick="window.location.href='home.html'">
+  <h1>Hệ hô hấp</h1>
+</header>
+
+<section class="info">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Human_respiratory_system_pedagogical_fr.svg/500px-Human_respiratory_system_pedagogical_fr.svg.png" alt="Hệ hô hấp">
+  <div>
+    <h2>Cấu tạo của hệ hô hấp</h2>
+    <ul>
+      
+<li>Mũi: Lọc và làm ấm không khí.</li>
+<li>Phổi: Trao đổi khí oxy và CO₂.</li>
+
+    </ul>
+              <iframe width="560" height="315" 
+src="https://www.youtube.com/embed/W_QmYwz-Jpo"
+title="YouTube video player" frameborder="0" 
+allowfullscreen></iframe>
+  </div>
+  </div>
+</section>
+
+<section>
+  <h2>Chức năng của hệ hô hấp</h2>
+  <ol>
+    
+<li>Hít vào oxy.</li>
+<li>Thở ra CO₂.</li>
+<li>Tạo năng lượng cho cơ thể.</li>
+
+  </ol>
+</section>
+
+<footer>© 2025 - Tìm hiểu cơ thể người</footer>
+
+</body>
+</html>

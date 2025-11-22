@@ -1,0 +1,129 @@
+
+/* style.css - Unified responsive styles (Style A: vàng + xanh) */
+:root{
+  --brand-yellow: #cf9912;
+  --brand-yellow-2: #eac363;
+  --brand-blue: #1e3a8a;
+  --bg: #f0f8ff;
+  --card-bg: #fffbea;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: #111;
+  margin:0;
+  padding:0;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Header */
+header{
+  background: linear-gradient(90deg,var(--brand-yellow), #d9a73a);
+  color:#fff;
+  padding:18px 16px;
+  text-align:center;
+  position:relative;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+header h1{margin:0;font-size:20px;letter-spacing:0.6px}
+header img.zoom-img{width:44px;position:absolute;left:14px;top:10px;cursor:pointer;transition:transform .25s ease}
+
+/* Nav */
+nav{
+  background: var(--brand-yellow-2);
+  padding:10px 14px;
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.02);
+}
+nav a{
+  display:inline-block;
+  text-decoration:none;
+  color:var(--brand-blue);
+  padding:10px 14px;
+  border-radius:8px;
+  font-weight:700;
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+  background: rgba(255,255,255,0.45);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+nav a:hover{transform:translateY(-3px) rotate(-1deg); background: #fff; box-shadow: 0 6px 18px rgba(0,0,0,0.08)}
+
+/* Section info */
+.info{
+  display:flex;
+  gap:20px;
+  align-items:center;
+  margin:18px auto;
+  max-width:1100px;
+  background: var(--card-bg);
+  padding:20px;
+  border-radius:14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.info:hover{transform:translateY(-4px); box-shadow: 0 18px 36px rgba(0,0,0,0.06)}
+
+/* Images in card */
+.info img{
+  width:260px;
+  max-width:40%;
+  border-radius:10px;
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.info img:hover{transform:scale(1.04)}
+
+/* Content inside info */
+.info > div{flex:1}
+.info h2{color:var(--brand-yellow); margin-top:0; font-size:20px}
+.info p{margin:8px 0}
+
+/* List styles */
+ul, ol{margin:10px 0 10px 20px;padding:0}
+li{background:#fff3cd;border:1px solid #e0b800;border-radius:10px;padding:10px;margin-bottom:8px}
+
+/* Video responsive */
+.video-container{position:relative;width:100%;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:10px}
+.video-container iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+
+/* Footer */
+#foot, footer{background: linear-gradient(90deg,var(--brand-yellow), #d9a73a); color:#fff; text-align:center; padding:12px; margin-top:18px;}
+
+/* Small helper */
+.container{max-width:1100px;margin:0 auto;padding:0 16px}
+
+/* Responsive rules */
+
+/* Large tablet */
+@media (max-width: 992px) {
+  .info{flex-wrap:wrap}
+  .info img{max-width:45%}
+  nav a{font-size:15px;padding:8px 12px}
+}
+
+/* Mobile: Option 2 - menu as large stacked buttons */
+@media (max-width: 600px){
+  header h1{font-size:18px;padding-right:48px} /* room for home icon */
+  nav{flex-direction:column;align-items:stretch;padding:8px 10px;gap:8px}
+  nav a{display:block;width:100%;padding:12px 14px;border-radius:10px;font-size:18px;text-align:center}
+  .info{flex-direction:column;text-align:center;padding:16px;margin:12px;border-radius:12px}
+  .info img{width:100%;max-width:320px;margin:0 auto}
+  .info > div{width:100%}
+  .info h2{font-size:20px}
+  li{font-size:16px}
+  body{font-size:16px}
+}
+
+/* Accessibility focus */
+a:focus{outline:3px solid rgba(30,58,138,0.18);outline-offset:3px}
+
+/* small screens video tweak */
+@media (max-width:420px){
+  .video-container{padding-bottom:60%}
+}
